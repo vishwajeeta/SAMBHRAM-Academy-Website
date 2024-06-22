@@ -1,57 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SAMBHRAM | events</title>
-    
+
     <link rel="stylesheet" href="./index.css" />
     <!-- <link rel="stylesheet" href="./logo.css" /> -->
-    <link rel="stylesheet" href="images.css">
+
     <style>
-        body{
-            background-image: none;
+      body {
+        background-image: none;
+      }
+      img {
+        border-radius: 0.5rem;
+        border: 1px solid grey;
+        width: 315px;
+        height: 202px;
+      }
+
+      .hidden {
+        opacity: 0;
+        filter: blur(5px);
+        transform: translateX(-100%);
+        transition: all 0.5s;
+      }
+      .show {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0);
+      }
+      @media (prefers-reduced-motion) {
+        .hidden {
+          transition: none;
         }
+      }
+
+      @media screen and (max-width: 1030px) {
+        img{
+          display: block;
+          
+          margin: auto;
+        }
+      }
     </style>
 
     <link rel="shortcut icon" href="./icon/logo.jpg" type="image/x-icon" />
-</head>
-<body>
-    <a href="./index.html" style="border: none;">
-    <div id="logos" title="SAMBHRAM Academy of management studies">
+  </head>
+  <body>
+    <a href="./index.html" style="border: none">
+      <div id="logos" title="SAMBHRAM Academy of management studies">
         <h1 style="color: red">SAMBHRAM</h1>
         <strong>Academy of Management Studies </strong>
       </div>
     </a>
-    
+
     <div id="navigation">
-        <a href="./index.html">Home</a>
-        <a href="./events.html">Events</a>
-        <a href="./course.html">Course</a>
-        <a href="./memories.html">Memories</a>
-        <a href="./about.html">About</a>
-      </div>
-      
+      <a href="./index.html">Home</a>
+      <a href="./events.html">Events</a>
+      <a href="./course.html">Course</a>
+      <a href="./about.html">About</a>
+    </div>
+
     <div id="navigation_phone">
-        <a href="./index.html">Home</a>
-        <a href="./events.html">Events</a>
-        <a href="./course.html">Course</a>
-        <a href="./memories.html">Memories</a>
-        <a href="./about.html">About</a>
-      </div>
-      
-    <h1 style="text-align: center;">Events</h1>
-    <div class="container">
-      <div class="gallery">
-          <img src="gallery/hgh.webp" >
-          <img src="gallery/humayub.jpg" >
-          <img src="gallery/IMG-20190629-WA0012.jpg" >
-          <img src="gallery/IMG-20200101-WA0000.jpg" >
-          <img src="gallery/jamamasjid.jpg" >
-          <img src="gallery/jantar.jpg" >
-          <img src="gallery/pp.jfif" >
-          <img src="gallery/qutab.jpg" >
-      </div>
-  </div>
-</body>
+      <a href="./index.html">Home</a>
+      <a href="./events.html">Events</a>
+      <a href="./course.html">Course</a>
+      <a href="./about.html">About</a>
+    </div>
+
+    <h1 style="text-align: center">Events</h1>
+    <div>
+      <h2
+        style="text-align: center; background-color: aliceblue; padding: 0.5rem"
+        class="hidden"
+      >
+        The Graduation Day ceremoney for the students of batch 2020-2024 was
+        organized on 5th May 2024, Friday
+      </h2>
+      <img src="gallery/set1_1.jpg" class="hidden" />
+      <img src="gallery/set1_2.jpg" class="hidden" />
+      <img src="gallery/set1_3.jpg" class="hidden" />
+      <img src="gallery/set1_4.jpg" class="hidden" />
+
+      <h2
+        style="text-align: center; background-color: aliceblue; padding: 0.5rem"
+        class="hidden"
+      >
+        our students have won Salesforce Hackaton which was held on 9th march
+        2024 at cambridge institute of technology.
+      </h2>
+
+      <img src="gallery/set2_1.jpeg" class="hidden" />
+      <img src="gallery/set2_2.jpeg" class="hidden" />
+      <img src="gallery/set2_3.jpeg" class="hidden" />
+
+      <h2
+        style="text-align: center; background-color: aliceblue; padding: 0.5rem"
+        class="hidden"
+      >
+        MOU signing ceremony between sambhram institution & IBM on 09 Dec 2023
+      </h2>
+      <img src="gallery/set3_1.jpeg" class="hidden" />
+
+      <h2
+        style="text-align: center; background-color: aliceblue; padding: 0.5rem"
+        class="hidden"
+      >
+        MOU signing ceremony between sambhram institution & IBM on 09 Dec 2023
+      </h2>
+      <img src="gallery/set4_1.jpeg" class="hidden" />
+      <img src="gallery/set4_2.jpeg" class="hidden" />
+      <img src="gallery/set4_3.jpeg" class="hidden" />
+      <img src="gallery/set4_4.jpeg" class="hidden" />
+      <img src="gallery/set4_5.jpeg" class="hidden" />
+      <img src="gallery/set4_6.jpeg" class="hidden" />
+      <img src="gallery/set4_7.jpeg" class="hidden" />
+      <img src="gallery/set4_8.jpeg" class="hidden" />
+      <img src="gallery/set4_9.jpeg" class="hidden" />
+      <img src="gallery/set4_10.jpeg" class="hidden" />
+    </div>
+  </body>
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        console.log(entry);
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        } else {
+          entry.target.classList.remove("show");
+        }
+      });
+    });
+    const hiddenElements = document.querySelectorAll(".hidden");
+    hiddenElements.forEach((e1) => observer.observe(e1));
+  </script>
 </html>

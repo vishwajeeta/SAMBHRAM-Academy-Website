@@ -12,15 +12,129 @@
         body{
             background-image: none;
         }
+        body{
+            background-color: whitesmoke;
+        }
+      /* .center1 {
+        text-align: center;
+        width: 100%;
+        
+      } */
+      #container {
+        margin: 20px;
+        padding: 10px;
+        display: inline-block;
+        border: 1px solid rgb(197, 195, 195);
+        width: 350px;
+        background-color: white;
+        border-radius: 15px;
+      }
+      img {
+        width: 100%;
+        border-radius: 15px;
+      }
+      .list {
+        word-spacing: 5px;
+        text-align: left;
+        margin-top: 10px;
+        margin-left: 20px;
+      }
+      .list span {
+        border: 1px solid grey;
+        padding: 5px;
+        border-radius: 25px;
+      }
+      .content {
+        display: inline-block;
+        text-align: left;
+        font: 1em sans-serif;
+      }
+      .content1{
+        text-align: center;
+      }
+      .center {
+        display: inline-block;
+        background-color: rgb(146, 213, 239);
+        border-radius: 30px;
+        width: 100px;
+       text-align: center; 
+       padding: 10px;
+       color: blue;
+       cursor: pointer;
+      }
+      .center:hover{
+        background-color: rgb(95, 201, 243) ;
+      }
+      p{
+        font-size: large;
+        line-height: 27px;
+      }
+
+
+      #content_grid{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        width: 100%;
+      }
+
+      @media screen and (max-width: 1030px) {
+       
+      #content_grid{
+        display: grid;
+        grid-template-columns: auto;
+      }
+
+      #container {
+        width: 300px;
+      }
+      }
+
+
+
+      .hidden {
+        opacity: 0;
+        filter: blur(5px);
+        transform: translateX(-100%);
+        transition: all 1s;
+      }
+      .show {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0);
+      }
+      @media (prefers-reduced-motion) {
+        .hidden {
+          transition: none;
+        }
+      }
+
+
+      .logo:nth-child(2){
+        transition-delay: 200ms;
+      }
+      .logo:nth-child(3){
+        transition-delay: 400ms;
+      }
+      
+      .logo:nth-child(5){
+        transition-delay: 200ms;
+      }
+      .logo:nth-child(6){
+        transition-delay: 400ms;
+      }
+      .logo:nth-child(8){
+        transition-delay: 200ms;
+      }
+      .logo:nth-child(9){
+        transition-delay: 400ms;
+      }
+      
+      
     </style>
 
     
     <link rel="shortcut icon" href="./icon/logo.jpg" type="image/x-icon" />
-    <style>
-        summary{
-            cursor: pointer;
-        }
-    </style>
+    
   </head>
   <body>
     <a href="./index.html" style="border: none;">
@@ -35,7 +149,6 @@
       <a href="./index.html">Home</a>
       <a href="./events.html">Events</a>
       <a href="./course.html">Course</a>
-      <a href="./memories.html">Memories</a>
       <a href="./about.html">About</a>
     </div>
 
@@ -44,12 +157,11 @@
       <a href="./index.html">Home</a>
       <a href="./events.html">Events</a>
       <a href="./course.html">Course</a>
-      <a href="./memories.html">Memories</a>
       <a href="./about.html">About</a>
     </div>
     
-    <h1>course</h1>
-    <details><summary>BCD [Bachelor of computer Applications]</summary>
+    <h1 style="text-align: center;">Course</h1>
+    <!-- <details><summary>BCD [Bachelor of computer Applications]</summary>
     <div>
         <h2>1st Year:</h2>
         <h3>1st semister</h3>
@@ -74,7 +186,204 @@
             <li>ADA</li>
         </ol>
     </div>
-    </details>
+    </details> -->
 
+    <!-- <h2>Computer Scrince & Engineering (CSE)</h2>
+    <h2>Artificial Intelligence & Machine Learning (AI & ML)</h2>
+    <h2></h2> -->
+
+
+<div id="content_grid">
+    <div class="center1 hidden logo">
+      <div id="container">
+        <img
+          src="./courses_images/Computer_Science_Engineering.jpeg"
+          alt="no photo found"
+        />
+        <div class="list">
+          <span>Nature</span>
+          <span>Lake</span>
+        </div>
+        <div class="content">
+          <h1>Computer Science & Engineering <br> (CSE)</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ea voluptates ipsa neque, unde ab expedita aut voluptate nostrum iusto.
+          </p>
+          <div class="content1">
+            <div class="center">Read More</div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="center1 hidden logo">
+      <div id="container">
+        <img
+          src="./courses_images/artificial_intelligence.jpeg"
+          alt="no photo found"
+        />
+        <div class="list">
+          <span>Nature</span>
+          <span>Lake</span>
+        </div>
+        <div class="content">
+          <h1>Artificial Intelligence & Machine Learning <br>(AI & ML)</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ea voluptates ipsa neque, unde ab expedita aut voluptate nostrum iusto.
+          </p>
+          <div class="content1">
+            <div class="center">Read More</div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="center1 hidden logo">
+      <div id="container">
+        <img
+          src="./courses_images/cyber_security.jpeg"
+          alt="no photo found"
+        />
+        <div class="list">
+          <span>Nature</span>
+          <span>Lake</span>
+        </div>
+        <div class="content">
+          <h1>Cyber Security <br>(Cyb sec)</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ea voluptates ipsa neque, unde ab expedita aut voluptate nostrum iusto.
+          </p>
+          <div class="content1">
+            <div class="center">Read More</div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="center1 hidden logo">
+      <div id="container">
+        <img
+          src="./courses_images/information_science.jpeg"
+          alt="no photo found"
+        />
+        <div class="list">
+          <span>Nature</span>
+          <span>Lake</span>
+        </div>
+        <div class="content">
+          <h1>Information Science & Engineering <br>(ISE)</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ea voluptates ipsa neque, unde ab expedita aut voluptate nostrum iusto.
+          </p>
+          <div class="content1">
+            <div class="center">Read More</div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="center1 hidden logo">
+      <div id="container">
+        <img
+          src="./courses_images/electronics.jpeg"
+          alt="no photo found"
+        />
+        <div class="list">
+          <span>Nature</span>
+          <span>Lake</span>
+        </div>
+        <div class="content">
+          <h1>Electronics & Communication Engineering <br>(ECE)</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ea voluptates ipsa neque, unde ab expedita aut voluptate nostrum iusto.
+          </p>
+          <div class="content1">
+            <div class="center">Read More</div>
+        </div>
+        </div>
+      </div>
+    </div>
+ 
+    <div class="center1 hidden logo">
+      <div id="container">
+        <img
+          src="./courses_images/mechanical_enginearing.jpeg"
+          alt="no photo found"
+        />
+        <div class="list">
+          <span>Nature</span>
+          <span>Lake</span>
+        </div>
+        <div class="content">
+          <h1>Mecanical Engineering <br>(MECH)</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ea voluptates ipsa neque, unde ab expedita aut voluptate nostrum iusto.
+          </p>
+          <div class="content1">
+            <div class="center">Read More</div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="center1 hidden logo">
+      <div id="container">
+        <img
+          src="./courses_images/civil.jpeg"
+          alt="no photo found"
+        />
+        <div class="list">
+          <span>Nature</span>
+          <span>Lake</span>
+        </div>
+        <div class="content">
+          <h1>Civil Engineering <br>(CIV)</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ea voluptates ipsa neque, unde ab expedita aut voluptate nostrum iusto.
+          </p>
+          <div class="content1">
+            <div class="center">Read More</div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="center1 hidden logo">
+      <div id="container">
+        <img
+          src="./courses_images/MBA.jpeg"
+          alt="no photo found"
+        />
+        <div class="list">
+          <span>Nature</span>
+          <span>Lake</span>
+        </div>
+        <div class="content">
+          <h1>Master of Business Administration  <br>(MBA)</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ea voluptates ipsa neque, unde ab expedita aut voluptate nostrum iusto.
+          </p>
+          <div class="content1">
+            <div class="center">Read More</div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
   </body>
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        console.log(entry);
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        } else {
+          entry.target.classList.remove("show");
+        }
+      });
+    });
+    const hiddenElements = document.querySelectorAll(".hidden");
+    hiddenElements.forEach((e1) => observer.observe(e1));
+  </script>
 </html>

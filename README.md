@@ -8,3 +8,4 @@ https://vishwajeeta.github.io/SAMBHRAM-Academy-Website/index.html
 ## About
 
 ## scrolling Animation
+## Redirect call & email
